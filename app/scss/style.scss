@@ -1,0 +1,233 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  background-color: #aec3b1;
+  min-height: 265px;
+  &__top {
+    padding: 15px 0 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top-link {
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+    @extend %open-300;
+    & + .header__top-link {
+      padding-top: 3px;
+    }
+  }
+}
+.general {
+  position: relative;
+  &__title {
+    padding-bottom: 14px;
+    @extend %open-700;
+    font-size: 16px;
+    max-width: 120px;
+    color: #fff;
+  }
+  &__text {
+    @extend %open-300;
+    font-size: 13px;
+    line-height: 18px;
+    max-width: 170px;
+    color: #fff;
+    font-style: italic;
+  }
+  &__text + .general__text {
+    padding-top: 14px;
+  }
+  &__img {
+    position: absolute;
+    top: -79px;
+    left: 110px;
+  }
+}
+
+.choose {
+  background-color: #e0e8e3;
+  padding: 40px 0 36px;
+  &__title {
+    text-align: center;
+    color: #ff802f;
+    font-size: 16px;
+    @extend %open-700;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 33px 0;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    max-width: 210px;
+    margin: 0 auto;
+    padding: 18px 72px;
+    background: #ff802f;
+    box-shadow: 0px 10px 18px rgba(255, 128, 47, 0.4);
+    border-radius: 30px;
+    @extend %open-700;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.help {
+  padding: 27px 0 12px;
+  &__wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 320px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/help-bg.jpg");
+      width: 320px;
+      height: 320px;
+      top: 52px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__title {
+    text-align: center;
+    @extend %open-700;
+    font-size: 16px;
+    color: #23252e;
+    padding-bottom: 30px;
+  }
+  &__subtitle {
+    @extend %open-700;
+    font-size: 16px;
+    color: #fff;
+    padding: 18px 0 13px 19px;
+    max-width: 138px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    @extend %open-300;
+    color: #fff;
+    font-style: italic;
+    padding: 0 0 8px 19px;
+    max-width: 160px;
+  }
+  &__span-img {
+    display: block;
+    width: 134px;
+    height: 26px;
+    margin-left: 19px;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 212px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/help-img.png");
+      width: 118px;
+      height: 14px;
+      top: 6px;
+      left: 6px;
+    }
+  }
+}
+
+.save {
+  padding-bottom: 12px;
+  &__title {
+    margin-bottom: 14px;
+    text-align: center;
+    @extend %open-700;
+    font-size: 16px;
+    color: #23252e;
+  }
+  &__btn {
+    text-align: center;
+    padding: 23px 0;
+    border-top: 1px solid #749078;
+    border-bottom: 1px solid #749078;
+  }
+  &__link {
+    padding: 10px 30px;
+    background: #c4c4c4;
+    border-radius: 5px;
+    font-size: 16px;
+    @extend %open-700;
+    color: #23252e;
+  }
+  &__price {
+    padding: 9px 0 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__price-old {
+    margin-right: 18px;
+    text-decoration-line: line-through;
+    font-size: 13px;
+    @extend %open-300;
+    color: #23252e;
+  }
+  &__price-new {
+    font-size: 16px;
+    @extend %open-700;
+    color: #23252e;
+  }
+  &__footer-title {
+    font-size: 10px;
+    @extend %open-300;
+    color: #23252e;
+    text-align: center;
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: #E0E8E3;
+  padding: 15px 0 17px;
+  &__text {
+    font-size: 10px;
+    @extend %open-300;
+    color: #23252e;
+    margin-bottom: 15px;
+    span a {
+      text-decoration: underline;
+      color: #23252e;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  }
+  &__item {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    height: 10px;
+    & + .footer__item {
+      border-left: 1px solid #23252e;
+    }
+  }
+  &__link {
+    font-size: 10px;
+    @extend %open-300;
+    color: #23252e;
+    text-decoration: underline;
+  }
+}
+
+@import "media";
